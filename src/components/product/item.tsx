@@ -10,10 +10,12 @@ interface IProps {
 export default class ProductItem extends Component<IProps> {
   render() {
     return (
-      <a href="/" className="panel-block">
-        { this.props.product.name }
-        ({this.props.product.id })
-      </a>
+      <div>
+        <a href="/" className="panel-block">
+          { this.props.product.name }
+          ({this.props.product.id })
+        </a>
+      </div>
     )
   }
 }

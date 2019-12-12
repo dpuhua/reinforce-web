@@ -6,6 +6,10 @@ const ProductListQuery = gql`
       id
       name
     }
+    getProduct(id: 10001) {
+      id
+      name
+    }
   }
 `
 
