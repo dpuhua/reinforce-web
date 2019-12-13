@@ -5,10 +5,12 @@ const ProductListQuery = gql`
     getAllProducts{
       id
       name
+      inStock
     }
     getProduct(id: 10001) {
       id
       name
+      inStock
     }
   }
 `

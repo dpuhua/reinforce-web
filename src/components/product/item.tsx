@@ -4,6 +4,7 @@ interface IProps {
   product: {
     name: string
     id: string
+    inStock: number
   }
 }
 
@@ -13,7 +14,8 @@ export default class ProductItem extends Component<IProps> {
       <div>
         <a href="/" className="panel-block">
           { this.props.product.name }
-          ({this.props.product.id })
+          (数量{this.props.product.inStock})
+          (id{this.props.product.id})
         </a>
       </div>
     )
