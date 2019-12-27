@@ -1,6 +1,6 @@
 import gql from 'graphql-tag'
 
-const mutation = gql`
+export const ProductMutation = gql`
   mutation makeOrder($productID: ID!, $quantity: Int) {
     makeOrder(productID: $productID, quantity: $quantity) {
       id
@@ -9,5 +9,3 @@ const mutation = gql`
     }
   }
 `
-
-export default mutation

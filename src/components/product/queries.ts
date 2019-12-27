@@ -1,7 +1,7 @@
 import gql from 'graphql-tag'
 
-const ProductListQuery = gql`
-  query {
+export const ProductListQuery = gql`
+  query getProducts{
     getAllProducts{
       id
       name
@@ -14,5 +14,3 @@ const ProductListQuery = gql`
     }
   }
 `
-
-export default ProductListQuery

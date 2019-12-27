@@ -1,15 +1,11 @@
 import React from 'react'
 import { Query, Mutation } from '@apollo/react-components'
 import ProductItem from './item'
-import ProductQuery from './queries'
-import ProductMutation from './mutation'
+import { ProductListQuery } from './queries'
+import { ProductMutation } from './mutation'
 import { QueryResult } from '@apollo/react-common'
 
-interface Product {
-  name: string
-  id: string
-  inStock: number
-}
+import { getProducts_getProduct } from 'generated/types'
 
 const cont = (context: any) => {
   console.log(context);
@@ -22,7 +18,7 @@ const ProductList: React.FC = () => {
   return (
     <div>
       <Query
-      query={ProductQuery}
+      query={ProductListQuery}
       context={cont}
       >
           {
@@ -46,7 +42,7 @@ const ProductList: React.FC = () => {
                   <button onClick={sp}>startPolling</button>
                   <button onClick={stopPolling}>stopPolling</button>
                   {
-                    getAllProducts.map((product: Product) => <ProductItem product={product} key={product.id}></ProductItem>)
+                    getAllProducts.map((product: getProducts_getProduct) => <ProductItem product={product} key={product.id}></ProductItem>)
                   }
                 </div>
               )

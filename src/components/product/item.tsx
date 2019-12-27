@@ -1,11 +1,8 @@
 import React, { Component } from 'react'
+import { getProducts_getProduct } from 'generated/types'
 
 interface IProps {
-  product: {
-    name: string
-    id: string
-    inStock: number
-  }
+  product: getProducts_getProduct
 }
 
 export default class ProductItem extends Component<IProps> {
